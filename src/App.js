@@ -27,6 +27,10 @@ class RenderFunction extends React.Component {
     render() {
         return (
             <center>
+                <div>
+                    <h1>Welcome to my app</h1>
+                    <MyButton />
+                </div>
                 <div className="App"> 
                     <header className="App-header">
                         <img src={logo} className="App-logo" alt="logo" />
@@ -42,7 +46,6 @@ class RenderFunction extends React.Component {
                         Learn React
                         </a>
                     </header>
-                    MyButton();
                 </div>
                 <h1>
                     We will be calling sum
@@ -71,6 +74,13 @@ class RenderFunction extends React.Component {
         )
     }
 }
+
+function MyButton() {
+    return (
+      <button>I'm a button</button>
+    );
+}
+
 export default function App() {
     return (
         <div className="App">
