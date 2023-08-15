@@ -1,103 +1,97 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react'
-import TextField from '@mui/material/TextField';
+import logo from "./logo.svg";
+import "./App.css";
+import TextField from "@mui/material/TextField";
+import React, { useState } from "react";
 
 // https://react.dev/reference/react/Component
-    // We recommend defining components as functions instead of classes.
+// We recommend defining components as functions instead of classes.
 
+export default function App() {
+  const [answer, setAnswer] = useState("answer");
 
-
-class RenderFunction extends React.Component {
-    
-    render() {
-        return (
-            <center>
-                <div>
-                    <MyButton />
-                </div>
-                <div className="App"> 
-                    <LogoWithText />
-                </div>
-                <div>
-                    <SumClass/>
-                </div>
-            </center>
-        );
-    }
-
-}
-
-function getSum() {
+  function getSum() {
     let x = parseInt(document.getElementById("elementA").value);
     let y = parseInt(document.getElementById("elementB").value);
 
-    console.log(x + y)
-    this.setState({ answer: x + y })
+    let sum = x + y;
+    console.log(sum);
+    setAnswer(sum);
+  }
+
+  return (
+    <center>
+      <div>
+        <MyButton />
+      </div>
+      {/* <div className="App"> 
+                    <LogoWithText />
+                </div> */}
+      <div>
+        <SumClass answer={answer} getSum={getSum} />
+      </div>
+    </center>
+  );
 }
 
-function SumClass () {
-    super();
-    this.state = { answer: "Answer" }
-    this.getSum = this.getSum.bind(this)
-    
-    return (
-        <header>
-            <h1>
-                We will be calling sum function from render
-            </h1>
-            <TextField id="elementA" variant="outlined" />  
-            <TextField id="elementB" variant="outlined" />
-            <br></br>
-            <br></br>
+function SumClass(props) {
+  return (
+    <header>
+      <h1>We will be calling the sum function from render</h1>
+      <TextField id='elementA' variant='outlined' />
+      <TextField id='elementB' variant='outlined' />
+      <br />
+      <br />
 
-            <button onClick={this.getSum} className="btn btn-primary">
-                Get Sum
-            </button>
-            <br></br>
-            <br></br>
-            <TextField id="elementC" disabled variant="outlined" value={this.state.answer} />
-        </header>
-    );
+      <button onClick={props.getSum} className='btn btn-primary'>
+        Get Sum
+      </button>
+      <br />
+      <br />
+      <TextField
+        id='elementC'
+        disabled
+        variant='outlined'
+        value={props.answer}
+      />
+    </header>
+  );
 }
 
-function LogoWithText()
-{
-    return (
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-                Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-            Learn React
-            </a>
-        </header>
-    );
+function LogoWithText() {
+  return (
+    <header className='App-header'>
+      <img src={logo} className='App-logo' alt='logo' />
+      <p>
+        Edit <code>src/App.js</code> and save to reload.
+      </p>
+      <a
+        className='App-link'
+        href='https://reactjs.org'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        Learn React
+      </a>
+    </header>
+  );
 }
 
-function MyButton()
-{
-    return (
-        <header>
-            <h1>Welcome to my app</h1>
-            <button>I'm a button</button>
-        </header>
-    );
+function MyButton() {
+  return (
+    <header>
+      <h1>Welcome to my app</h1>
+      <button>I'm a button</button>
+    </header>
+  );
 }
 
-export default function App() {
-    return (
-        <div className="App">
-            <RenderFunction />
-        </div>
-    );
-}
+// export default function App() {
+//     return (
+//         <div className="App">
+//             <RenderFunction />
+//         </div>
+//     );
+// }
 
 /*
 import logo from './logo.svg';
