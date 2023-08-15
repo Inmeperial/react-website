@@ -28,7 +28,7 @@ class RenderFunction extends React.Component {
 
 }
 
-getSum() {
+function getSum() {
     let x = parseInt(document.getElementById("elementA").value);
     let y = parseInt(document.getElementById("elementB").value);
 
@@ -44,8 +44,7 @@ function SumClass () {
     return (
         <header>
             <h1>
-                We will be calling sum
-                function from render
+                We will be calling sum function from render
             </h1>
             <TextField id="elementA" variant="outlined" />  
             <TextField id="elementB" variant="outlined" />
