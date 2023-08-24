@@ -23,9 +23,9 @@ export default function App() {
       <div>
         <MyButton />
       </div>
-      {/* <div className="App"> 
-                    <LogoWithText />
-                </div> */}
+      <div className="App"> 
+          <LogoWithText />
+      </div>
       <div>
         <SumClass answer={answer} getSum={getSum} />
       </div>
@@ -84,48 +84,3 @@ function MyButton() {
     </header>
   );
 }
-
-// export default function App() {
-//     return (
-//         <div className="App">
-//             <RenderFunction />
-//         </div>
-//     );
-// }
-
-/*
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App"> 
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      MyButton();
-    </div>
-  );
-}
-
-function MyButton() {
-  return (
-    <div className="App-button">
-        <button id ="btn">I'm a button</button>
-    </div>
-  );
-}
-
-export default App;
-*/
