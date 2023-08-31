@@ -1,3 +1,4 @@
+/* 
 import logo from "./logo.svg";
 import "./App.css";
 import TextField from "@mui/material/TextField";
@@ -84,3 +85,16 @@ function MyButton() {
     </header>
   );
 }
+*/
+
+import "./styles/globals.css";
+import Layout from "./components/layout";
+function MyApp({ Component, pageProps }) {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
+}
+
+export default MyApp;
