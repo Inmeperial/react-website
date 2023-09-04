@@ -2,7 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import TextField from "@mui/material/TextField";
 import React, { useState } from "react";
-import SectionService from "./components/SectionService"
+import SectionService from "./components/Sectionservice.js"
+import NavBar from "./components/Navbar.js"
 
 // https://react.dev/reference/react/Component
 // We recommend defining components as functions instead of classes.
@@ -22,24 +23,31 @@ export default function App() {
   return (
     <center>
       <div>
+        <NavBar/>
+      </div>
+      <div>
         <SectionService/>
       </div>
-      <div className="App"> 
-          <LogoWithText />
-      </div>
-      
     </center>
   );
 }
 
 
 /*
+
+<div>
+    <SectionService/>
+</div>
+<div className="App"> 
+      <LogoWithText />
+</div>
 <div>
   <MyButton />
 </div>
 <div>
   <SumClass answer={answer} getSum={getSum} />
 </div>
+
 */
 
 function SumClass(props) {

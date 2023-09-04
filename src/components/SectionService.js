@@ -1,23 +1,12 @@
 import React from 'react';
 import "./SectionService.css";
 import { FaEnvira, FaCodepen, FaBusAlt, FaDrawPolygon } from "react-icons/fa";
-import logo from "../Images/logo.png";
-import {StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
-    container: {
-      width: '10%',
-      height: '10%',
-    },
-  });
 
 class SectionService extends React.Component {
     render() {
         return  (
             <div>
-                <div>
-                    <img src={logo} style={styles.container} resizeMode="cover" alt="souvenir" />
-                </div>
                 <div className="WrappTotal">
                     <div className="Wrapp">
                         <FaEnvira className="FaEnviraCss" />

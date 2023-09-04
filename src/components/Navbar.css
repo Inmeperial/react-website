@@ -1,0 +1,11 @@
+.NavBarTest{
+    display: flex; 
+    margin-top: 1rem; 
+    flex-direction: column; 
+    @media (min-width: 768px) { 
+        margin-top: 0;
+        /*margin-left: 2rem; 
+        flex-direction: row;
+        */
+    }
+}
