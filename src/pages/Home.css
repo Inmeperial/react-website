@@ -1,0 +1,52 @@
+.SwiperPicture{
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.SwiperTextContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ /* 
+    margin-top: 1.5rem;
+    height: 50vh;
+    --bg-opacity: 0.1;
+ */ 
+
+.SwiperTitle{
+    font-size: 4.5rem;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.SwiperText{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ffffff;
+}
+ /*
+    line-height: 2rem;
+*/
+
+.SwiperButton{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgb(217 119 6);
+
+    
+}
+.SwiperButton:hover {
+    background-color: rgb(146 64 14);
+}

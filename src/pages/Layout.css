@@ -1,3 +1,51 @@
 li {
     list-style-type: none; /* remove dots from li elements */
 }
+
+.WrapperHyperLinks{
+    display: flex; 
+    /*  margin-top: 1rem;  */
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; 
+    padding-top: 1.25rem;
+    
+    justify-content: space-between; 
+   
+    @media (min-width: 768px) {
+        flex-direction: row;
+        margin-left: 40%;
+        margin-right: 40%;
+        /* 
+            margin-top: 0; 
+            padding-left: 1rem;
+            padding-right: 1rem;
+        */
+    }   
+
+}
+/* 
+    padding-bottom: 1.25rem; 
+    align-items: center; ??
+    
+    Not working
+    .WrapperHyperLinks:hover {
+        color: rgb(234 179 8); !important; 
+    }
+*/
+
+.HyperLinks{
+    display: block;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/*
+   
+        color: #D97706;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem; 
+        padding-left: 0.75rem; 
+        padding-right: 1rem; 
+*/
+

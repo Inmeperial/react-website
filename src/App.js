@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import SectionService from "./components/Sectionservice.js"
 import NavBar from "./components/Navbar.js"
 
+
 // https://react.dev/reference/react/Component
 // We recommend defining components as functions instead of classes.
 
@@ -25,16 +26,14 @@ export default function App() {
       <div>
         <NavBar/>
       </div>
-      <div>
-        <SectionService/>
-      </div>
     </center>
   );
 }
 
 
-/*
 
+
+/*
 <div>
     <SectionService/>
 </div>
