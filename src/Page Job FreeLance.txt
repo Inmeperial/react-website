@@ -1,6 +1,0 @@
-function explicacion() {	
-	layout.js tiene cargada clases y en le medio le manda el children, esto es para que las clases llamadas no cambien pero children si. Este esta llamado desde la funcion en _app, nose como pero asi solo cambia lo de adentro del que pone como Layout. Las paginas (Index, contact, aboutus, services), son llamadas desde el navBar puesto en layout.js y estos a su vez, tienen cargados el texto completo con sus css o como en el caso de inde.js , sus propias llamadas a clases con render en un orden.
-
-	Que significa "export default" en todos es igual menos en index.
-}
-

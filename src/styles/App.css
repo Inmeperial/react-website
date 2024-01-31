@@ -1,0 +1,65 @@
+body {
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin: 0;
+    min-height: calc(100vh - 190px);
+}
+
+.nav-link {
+    font-size: 20px;
+    color: #ffff;
+    text-shadow: 1px 1px 1px #000;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #00ffff;
+    text-shadow: 1px 1px 1px #ffff;
+}
+
+.gif {
+    width: 1200px;
+    margin-top: 50px;
+}
+
+.welcome-logo {
+    width: 200px;
+    margin: 0px 50px
+}
+
+.footer-logo {
+    width: 100px;
+    height: 110px;
+}
+
+.header-logo {
+    width: 100px;
+    height: 110px;
+}
+
+@media (width < 1200px) {
+    .gif {
+        width: 600px;
+    }
+}
+
+@media (width < 700px) {
+    .nav-link {
+        font-size: 16px;
+    }
+    .gif {
+        width: 300px;
+    }
+    .footer-logo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (width < 700px) {
+    .welcome-logo {
+        width: 150px;
+        margin: 0px 50px
+    }
+}
