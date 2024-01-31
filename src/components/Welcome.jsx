@@ -1,11 +1,11 @@
 import { Box, Divider, Typography } from "@mui/material";
 import Logo from "../assets/logo.png";
 import Gif from "../assets/proceso.gif";
-import { WelcomeBox } from "../styles/CustomMUI";
+import { FlexColumnBox } from "../styles/CustomMUI";
 
 const Welcome = () => {
   return (
-    <Box sx={{ ...WelcomeBox }}>
+    <Box sx={{ ...FlexColumnBox, my:"120px" }}>
       <Box
         sx={{
           display: "flex",

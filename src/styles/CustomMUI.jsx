@@ -47,19 +47,41 @@ export const ButtonMenu = {
   color: "#ffff",
 };
 
-export const WelcomeBox = {
+export const FlexColumnBox = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  my: "120px",
 };
 
 export const ListArea = {
-  display:"flex",
-  flexFlow:"row wrap"
+  display: "flex",
+  flexFlow: "row wrap",
+  justifyContent: "space-around",
+  my: "20px",
 };
 
 export const ListItemArea = {
   flexDirection: "column",
   width: "140px",
+  flexWrap: "wrap",
+  mx: "20px",
+};
+
+export const IconArea = {
+  fontSize: "90px",
+  color: "#1976D1",
+  "&:hover": {
+    color: "#35a4ff",
+  },
+};
+
+export const IconProcess = {
+  fontSize: "120px",
+  color: "#000",
+};
+
+export const TitleProcess = {
+  height: "50px",
+  color: "#eb6f35",
+  textShadow: "0.5px 0.5px 0.5px #fa844d",
 };
