@@ -85,3 +85,16 @@ export const TitleProcess = {
   color: "#eb6f35",
   textShadow: "0.5px 0.5px 0.5px #fa844d",
 };
+
+export const BoxProjectsAreas = {
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  width: "600px",
+  height: "500px",
+  padding: "2rem",
+  borderRadius: "1rem",
+  display:"flex",
+  flexDirection: "column",
+  justifyContent:"space-between"
+}

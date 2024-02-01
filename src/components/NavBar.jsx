@@ -46,10 +46,10 @@ const NavBar = ({ window }) => {
       >
         {navItems.map((item) => (
           <Button
-          key={item}
+            key={item}
             sx={{ ...ButtonMenu }}
             component={Link}
-            to={item === "Home" ? "/" : "/"+item}
+            to={item === "Home" ? "/" : "/" + item}
           >
             {item}
           </Button>
@@ -67,20 +67,16 @@ const NavBar = ({ window }) => {
           }}
         >
           <img src={Logo} alt='Logo' />
-          <Box sx={{ mr: "10px", display: { xs: "none", sm: "flex" }}}>
-            {" "}
-            <Typography variant='h6' mr={3}>
-              <Link className="nav-link" to='/'>Home</Link>
-            </Typography>
-            <Typography variant='h6' mr={3}>
-              <Link className="nav-link" to='/proyectos'>Proyectos</Link>
-            </Typography>
-            <Typography variant='h6' mr={3}>
-              <Link className="nav-link" to='/Nosotros'>Nosotros</Link>
-            </Typography>
-            <Typography variant='h6'>
-              <Link className="nav-link" to='/Contacto'>Contacto</Link>
-            </Typography>
+          <Box sx={{ mr: "10px", display: { xs: "none", sm: "flex" } }}>
+            {navItems.map((item, index) => {
+              return (
+                <Typography key={index} variant='h6' mr={3}>
+                  <Link className='nav-link' to={item === "Home" ? "/" : "/" + item}>
+                    {item}
+                  </Link>
+                </Typography>
+              );
+            })}
           </Box>
           <IconButton
             color='inherit'

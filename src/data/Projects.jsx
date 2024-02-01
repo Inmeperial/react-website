@@ -1,40 +1,36 @@
-import Img from "../assets/img000.jpg"
+import Image from "../assets/img000.jpg";
 
 export const ProyectsData = [
   {
     id: 1,
-    titulo: "Proyecto 1",
-    descripcion:
+    title: "Proyecto 1",
+    area: "Casas",
+    description:
       "Lorem ipsum dolor sit amet, eu aperiam similique definitionem nec, ut mea periculis efficiendi. Eu usu verear vulputate. Id sed error adversarium, error accusamus dissentiunt usu an. Qui id facer putant urbanitas, tritani copiosae intellegebat vix ea, id mea sadipscing theophrastus. Ne his invenire salutandi moderatius, elitr tibique mea ei.",
-    images: [
-        {src: "", alt: ""}
-    ]
+    images: [Image],
   },
   {
     id: 2,
-    titulo: "Proyecto 2",
-    descripcion:
+    title: "Proyecto 2",
+    area: "Edificios",
+    description:
       "Lorem ipsum dolor sit amet, eu aperiam similique definitionem nec, ut mea periculis efficiendi. Eu usu verear vulputate. Id sed error adversarium, error accusamus dissentiunt usu an. Qui id facer putant urbanitas, tritani copiosae intellegebat vix ea, id mea sadipscing theophrastus. Ne his invenire salutandi moderatius, elitr tibique mea ei.",
-    images: [
-        {src: "", alt: ""}
-    ]
+    images: [Image],
   },
   {
     id: 3,
-    titulo: "Proyecto 3",
-    descripcion:
+    title: "Proyecto 3",
+    area: "Baños",
+    description:
       "Lorem ipsum dolor sit amet, eu aperiam similique definitionem nec, ut mea periculis efficiendi. Eu usu verear vulputate. Id sed error adversarium, error accusamus dissentiunt usu an. Qui id facer putant urbanitas, tritani copiosae intellegebat vix ea, id mea sadipscing theophrastus. Ne his invenire salutandi moderatius, elitr tibique mea ei.",
-    images: [
-        {src: "", alt: ""}
-    ]
+    images: [Image],
   },
   {
     id: 4,
-    titulo: "Proyecto 4",
-    descripcion:
+    title: "Proyecto 4",
+    area: "Arquitectura",
+    description:
       "Lorem ipsum dolor sit amet, eu aperiam similique definitionem nec, ut mea periculis efficiendi. Eu usu verear vulputate. Id sed error adversarium, error accusamus dissentiunt usu an. Qui id facer putant urbanitas, tritani copiosae intellegebat vix ea, id mea sadipscing theophrastus. Ne his invenire salutandi moderatius, elitr tibique mea ei.",
-    images: [
-        {src: "", alt: ""}
-    ]
+    images: [Image],
   },
 ];
