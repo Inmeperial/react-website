@@ -1,7 +1,7 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { ProyectsData } from "../data/Projects";
 import { useParams } from "react-router-dom";
-import { MarginHeader } from "../styles/CustomMUI";
+import { MarginHeader, SwiperPicture } from "../styles/CustomMUI";
 import ProjectImageSlider from "../components/ProjectImageSlider";
 
 const ProjectDetails = () => {
@@ -21,7 +21,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <Box sx={{ ...MarginHeader }}>
+    <Box sx={{ my: "100px", paddingY: "2rem" }}>
       <Box textAlign='center'>
         <Typography sx={{ my: "20px", color: "#1976D1" }} variant='h4'>
           {project.title}
@@ -30,13 +30,11 @@ const ProjectDetails = () => {
           Categoria: {project.area}
         </Typography>
       </Box>
-      <Box>
-        <img
-          style={{ width: "100%" }}
-          src={project.images[0]}
-          alt={project.title}
-        />
-      </Box>
+      <img
+        style={{ width: "100%" }}
+        src={project.images[0]}
+        alt={project.title}
+      />
       <Box
         sx={{
           width: "100%",
