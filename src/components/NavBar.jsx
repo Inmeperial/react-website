@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../assets/logo.png";
 import { ButtonMenu } from "../styles/CustomMUI";
+import { ScrollToBottom, ScrollToTop } from "./Scroll";
 
 const drawerWidth = 240;
 const navItems = ["Home", "Proyectos", "Nosotros", "Contacto"];
@@ -44,16 +45,22 @@ const NavBar = ({ window }) => {
           mt: "10px",
         }}
       >
-        {navItems.map((item) => (
-          <Button
-            key={item}
-            sx={{ ...ButtonMenu }}
-            component={Link}
-            to={item === "Home" ? "/" : "/" + item}
-          >
-            {item}
-          </Button>
-        ))}
+        {navItems.map((item) =>
+          item === "Contacto" ? (
+            <Button key={item} sx={{ ...ButtonMenu }} onClick={ScrollToBottom}>
+              {item}
+            </Button>
+          ) : (
+            <Button
+              key={item}
+              sx={{ ...ButtonMenu }}
+              component={Link}
+              to={item === "Home" ? "/" : "/" + item}
+            >
+              {item}
+            </Button>
+          )
+        )}
       </List>
     </Box>
   );
@@ -69,9 +76,22 @@ const NavBar = ({ window }) => {
           <img src={Logo} alt='Logo' />
           <Box sx={{ mr: "10px", display: { xs: "none", sm: "flex" } }}>
             {navItems.map((item, index) => {
-              return (
+              return item === "Contacto" ? (
+                <Typography
+                  key={index}
+                  variant='h6'
+                  mr={3}
+                  onClick={ScrollToBottom}
+                >
+                  <Link className='nav-link'>{item}</Link>
+                </Typography>
+              ) : (
                 <Typography key={index} variant='h6' mr={3}>
-                  <Link className='nav-link' to={item === "Home" ? "/" : "/" + item}>
+                  <Link
+                    className='nav-link'
+                    to={item === "Home" ? "/" : "/" + item}
+                    onClick={ScrollToTop}
+                  >
                     {item}
                   </Link>
                 </Typography>
