@@ -94,7 +94,13 @@ export const BoxProjectsAreas = {
   height: "500px",
   padding: "2rem",
   borderRadius: "1rem",
-  display:"flex",
+  display: "flex",
   flexDirection: "column",
-  justifyContent:"space-between"
-}
+  justifyContent: "space-between",
+};
+
+export const MarginHeader = {
+  mx: "20px",
+  my: "100px",
+  paddingY: "2rem",
+};

@@ -9,6 +9,7 @@ import {
 import { ProyectsData } from "../data/Projects";
 import ProjectsComponent from "../components/ProjectsComponent";
 import { useState } from "react";
+import { MarginHeader } from "../styles/CustomMUI";
 
 const Areas = ["Todas", "Casas", "Edificios", "Baños", "Arquitectura"];
 
@@ -31,7 +32,7 @@ const Projects = () => {
   };
 
   return (
-    <Box sx={{ mt: "100px", paddingY: "2rem" }}>
+    <Box sx={{ ...MarginHeader }}>
       <Box sx={{ textAlign: "center", mr: "20px" }}>
         <Typography
           variant='h4'

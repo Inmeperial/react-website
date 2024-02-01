@@ -53,15 +53,19 @@ const ImageSlider = () => {
               sx={{ ...SwiperPicture, backgroundImage: `url(${image.url})` }}
             >
               <Box sx={{ ...SwiperTextContainer }}>
-                  <Typography variant='h2' sx={{ ...SwiperTitle }}>
-                    {image.title}
-                  </Typography>
-                  <Typography paragraph={true} variant='caption' sx={{ ...SwiperText }}>
-                    {image.text}
-                  </Typography>
-                  <Button sx={{ ...ButtonStyle }} variant='contained'>
-                    CONTACT US
-                  </Button>
+                <Typography variant='h2' sx={{ ...SwiperTitle }}>
+                  {image.title}
+                </Typography>
+                <Typography
+                  paragraph={true}
+                  variant='caption'
+                  sx={{ ...SwiperText }}
+                >
+                  {image.text}
+                </Typography>
+                <Button sx={{ ...ButtonStyle }} variant='contained'>
+                  CONTACT US
+                </Button>
               </Box>
             </Box>
           </SwiperSlide>
