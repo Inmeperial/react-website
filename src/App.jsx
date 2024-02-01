@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles/App.css";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ProjectDetails from "./pages/ProjectDetails";
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />

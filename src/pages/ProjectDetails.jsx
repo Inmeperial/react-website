@@ -55,7 +55,9 @@ const ProjectDetails = () => {
           <strong style={{ color: "#e4893e" }}>Descripción:</strong>
         </Typography>
         <Typography
-          sx={isPc ? {mx: "300px"} : isMobile ? { mx: "20px" } : { mx: "220px" }}
+          sx={
+            isPc ? { mx: "300px" } : isMobile ? { mx: "20px" } : { mx: "220px" }
+          }
           variant='body1'
         >
           {project.description}
