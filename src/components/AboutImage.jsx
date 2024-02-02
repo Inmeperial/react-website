@@ -39,13 +39,13 @@ const AboutImage = () => {
                 ? {
                     ...SwiperText,
                     my: "1rem",
-                    color: "secondary.main",
+                    color: "title.main",
                     width: "70%",
                   }
                 : {
                     ...SwiperText,
                     my: "1rem",
-                    color: "secondary.main",
+                    color: "title.main",
                     width: "30%",
                   }
             }

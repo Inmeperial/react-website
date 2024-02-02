@@ -52,7 +52,7 @@ const AboutBody = () => {
                   src={perfil}
                   alt={index}
                 />
-                <Box sx={{ mx: "20px" }}>
+                <Box sx={{ mx: "20px", textAlign:"center" }}>
                   <Typography color='secondary.main'>Puesto</Typography>
                   <Typography my={1} color='title.main'>
                     Nombre Apellido
