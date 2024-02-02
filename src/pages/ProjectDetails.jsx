@@ -1,7 +1,6 @@
 import { Box, Typography, useMediaQuery } from "@mui/material";
 import { ProyectsData } from "../data/Projects";
 import { useParams } from "react-router-dom";
-import { MarginHeader, SwiperPicture } from "../styles/CustomMUI";
 import ProjectImageSlider from "../components/ProjectImageSlider";
 
 const ProjectDetails = () => {

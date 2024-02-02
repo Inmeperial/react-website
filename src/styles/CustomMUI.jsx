@@ -104,3 +104,10 @@ export const MarginHeader = {
   my: "100px",
   paddingY: "2rem",
 };
+
+export const FlexLogoText = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexWrap: "wrap",
+};
