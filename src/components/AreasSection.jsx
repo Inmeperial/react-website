@@ -20,7 +20,7 @@ import {
 const AreasSection = () => {
   return (
     <Box sx={{ ...FlexColumnBox, mb:"50px" }}>
-      <Typography variant='h5' sx={{mb: "20px"}}>Áreas de enfoque:</Typography>
+      <Typography variant='h5' sx={{mb: "20px", color:"title.main"}}>Áreas de enfoque:</Typography>
 
       <Box>
         <List sx={{ ...ListArea }}>

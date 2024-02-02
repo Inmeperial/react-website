@@ -13,12 +13,12 @@ const Welcome = () => {
       >
         <img className='welcome-logo' src={Logo} alt='Logo' />
         <Box sx={{ width: "300px" }}>
-          <Typography variant='h5' color="#1976D1">Bienvenidos a Construcciones XYZ</Typography>
+          <Typography variant='h5' color="title.main">Bienvenidos a Construcciones XYZ</Typography>
           <Divider />
-          <Typography my={1} variant='h6' color='#eb6f35'>
+          <Typography my={1} variant='h6' color='secondary.main'>
             Lorem ipsum dolor sit amet, ut ius appareat concludaturque.
           </Typography>
-          <Typography my={2} variant='body1'>
+          <Typography my={2} variant='body1' color="text.secondary">
             Id pri mandamus salutandi, viris causae no eos. Inani dolores
             splendide mea id, per tantas salutandi gubergren id.
           </Typography>

@@ -1,4 +1,4 @@
-import { BoxProjectsAreas } from "../styles/CustomMUI";
+import { BoxProjectsAreas, ShadowTextBlack } from "../styles/CustomMUI";
 import { Link } from "react-router-dom";
 import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 
@@ -28,10 +28,10 @@ const ProjectsComponent = (props) => {
                 }
           }
         >
-          <Typography variant='h6' sx={{ color: "#ffff" }}>
+          <Typography variant='h6' sx={{ ...ShadowTextBlack, color: "text.main" }}>
             {title}
           </Typography>
-          <Typography variant='body1' sx={{ color: "#ffff" }}>
+          <Typography variant='body1' sx={{ ...ShadowTextBlack, color: "text.main" }}>
             Categoria: {area}
           </Typography>
         </Box>

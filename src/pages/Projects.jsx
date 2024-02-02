@@ -36,11 +36,11 @@ const Projects = () => {
       <Box sx={{ textAlign: "center", mr: "20px" }}>
         <Typography
           variant='h4'
-          sx={{ textDecoration: "underline", my: "10px" }}
+          sx={{ textDecoration: "underline", my: "10px", color:"title.main" }}
         >
           Obras
         </Typography>
-        <Typography variant='body1'>
+        <Typography variant='body1' color="secondary.main">
           Una variedad de proyectos y desarrollos de diversas características en
           toda Argentina.
         </Typography>

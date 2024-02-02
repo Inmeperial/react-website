@@ -8,26 +8,39 @@ const Footer = () => {
         <Toolbar>
           <Box
             sx={{
-                width: "100dvw",
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-evenly",
+              width: "100dvw",
+              display: "flex",
+              flexDirection: "row",
+              color: "text.main",
+              alignItems: "center",
             }}
           >
-            <img className="footer-logo " src={Logo} alt='Logo' />
-            <Box mt={3}>
-              <Typography>Calle 1234, CABA.</Typography>
-              <Typography>Argentina C0000XYZ</Typography>
-            </Box>
-            <Box mt={3}>
-              <Typography>Tel./Fax: [+54] 11 0000-0000</Typography>
-              <Typography>email@email.com</Typography>
+            <img className='footer-logo ' src={Logo} alt='Logo' />
+            <Box
+              sx={{
+                width:"100%",
+                display: "flex",
+                justifyContent:"space-evenly"
+              }}
+            >
+              <Box>
+                <Typography variant='body1'>
+                  Calle 1234, CABA.
+                </Typography>
+                <Typography variant='body1'>Argentina C0000XYZ</Typography>
+              </Box>
+              <Box>
+                <Typography variant='body1'>
+                  Tel./Fax: [+54] 11 0000-0000
+                </Typography>
+                <Typography variant='body1'>email@email.com</Typography>
+              </Box>
             </Box>
           </Box>
         </Toolbar>
       </AppBar>
       <Typography
-        sx={{ backgroundColor: "#2f51e9", color: "#ffff" }}
+        sx={{ backgroundColor: "secondary.main", color: "text.main" }}
         variant='subtitle2'
         textAlign={"center"}
       >

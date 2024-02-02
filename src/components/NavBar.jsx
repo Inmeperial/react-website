@@ -4,7 +4,6 @@ import {
   Box,
   IconButton,
   Toolbar,
-  Typography,
   Drawer,
   List,
   Button,
@@ -12,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../assets/logo.png";
-import { ButtonMenu } from "../styles/CustomMUI";
+import { ButtonMenu, NavButton } from "../styles/CustomMUI";
 import { ScrollToBottom, ScrollToTop } from "./Scroll";
 
 const drawerWidth = 240;
@@ -30,11 +29,8 @@ const NavBar = ({ window }) => {
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
-      height='100%'
-      sx={{
-        backgroundColor: "#008cff",
-        color: "#ffff",
-      }}
+      height='100dvh'
+      sx={{ backgroundColor: "primary.main" }}
     >
       <List
         sx={{
@@ -67,7 +63,7 @@ const NavBar = ({ window }) => {
 
   return (
     <Box>
-      <AppBar sx={{ paddingY: "1rem" }} position='fixed'>
+      <AppBar position='fixed'>
         <Toolbar
           sx={{
             justifyContent: "space-between",
@@ -77,29 +73,29 @@ const NavBar = ({ window }) => {
           <Box sx={{ mr: "10px", display: { xs: "none", sm: "flex" } }}>
             {navItems.map((item, index) => {
               return item === "Contacto" ? (
-                <Typography
+                <Button
                   key={index}
-                  variant='h6'
-                  mr={3}
                   onClick={ScrollToBottom}
+                  sx={{
+                    ...NavButton,
+                  }}
                 >
-                  <Link className='nav-link'>{item}</Link>
-                </Typography>
+                  {item}
+                </Button>
               ) : (
-                <Typography key={index} variant='h6' mr={3}>
-                  <Link
-                    className='nav-link'
-                    to={item === "Home" ? "/" : "/" + item}
-                    onClick={ScrollToTop}
-                  >
-                    {item}
-                  </Link>
-                </Typography>
+                <Button
+                  key={index}
+                  sx={{ ...NavButton }}
+                  component={Link}
+                  to={item === "Home" ? "/" : "/" + item}
+                  onClick={ScrollToTop}
+                >
+                  {item}
+                </Button>
               );
             })}
           </Box>
           <IconButton
-            color='inherit'
             aria-label='open drawer'
             edge='start'
             onClick={handleDrawerToggle}

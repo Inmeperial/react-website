@@ -36,11 +36,16 @@ const AboutImage = () => {
             variant='body1'
             sx={
               isMobile
-                ? { ...SwiperText, my: "1rem", color: "#eb6f35", width: "70%" }
+                ? {
+                    ...SwiperText,
+                    my: "1rem",
+                    color: "secondary.main",
+                    width: "70%",
+                  }
                 : {
                     ...SwiperText,
                     my: "1rem",
-                    color: "#eb6f35",
+                    color: "secondary.main",
                     width: "30%",
                   }
             }
@@ -54,13 +59,11 @@ const AboutImage = () => {
               isMobile
                 ? {
                     width: "70%",
-                    color: "#008cff",
-                    textShadow: "1.5px 1.5px 1.5px #000",
+                    color: "text.main",
                   }
                 : {
                     width: "30%",
-                    color: "#008cff",
-                    textShadow: "1.5px 1.5px 1.5px #000",
+                    color: "text.main",
                   }
             }
           >

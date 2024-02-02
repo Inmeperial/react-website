@@ -22,10 +22,13 @@ const ProjectDetails = () => {
   return (
     <Box sx={{ my: "100px", paddingY: "2rem" }}>
       <Box textAlign='center'>
-        <Typography sx={{ my: "20px", color: "#1976D1" }} variant='h4'>
+        <Typography sx={{ my: "20px", color: "title.main" }} variant='h4'>
           {project.title}
         </Typography>
-        <Typography sx={{ my: "20px", color: "#e4893e" }} variant='subtitle1'>
+        <Typography
+          sx={{ my: "20px", color: "secondary.main" }}
+          variant='subtitle1'
+        >
           Categoria: {project.area}
         </Typography>
       </Box>
@@ -41,19 +44,23 @@ const ProjectDetails = () => {
           my: "40px",
         }}
       >
-        <Typography my='30px' variant='body1'>
-          <strong style={{ color: "#e4893e" }}>Año:</strong>
+        <Typography my='20px' variant='body1' color='secondary.main'>
+          <strong>Año:</strong>
         </Typography>
-        <Typography my='30px' variant='body1'>
+        <Typography variant='body1' color='text.secondary'>
           {project.year}
         </Typography>
 
-        <Typography variant='body1'>
-          <strong style={{ color: "#e4893e" }}>Descripción:</strong>
+        <Typography my='20px' variant='body1' color='secondary.main'>
+          <strong>Descripción:</strong>
         </Typography>
         <Typography
           sx={
-            isPc ? { mx: "300px" } : isMobile ? { mx: "20px" } : { mx: "220px" }
+            isPc
+              ? { mx: "300px", color: "text.secondary" }
+              : isMobile
+              ? { mx: "20px", color: "text.secondary" }
+              : { mx: "220px", color: "text.secondary" }
           }
           variant='body1'
         >

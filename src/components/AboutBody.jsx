@@ -17,11 +17,11 @@ const AboutBody = () => {
           }}
         >
           <img className='welcome-logo' src={Logo} alt='logo'></img>
-          <Box maxWidth='300px' my="50px">
-            <Typography my={1} variant='h5'>
+          <Box maxWidth='300px' my='50px'>
+            <Typography my={1} variant='h5' color="title.main">
               ¿Quienes somos?
             </Typography>
-            <Typography my={2} variant='body2'>
+            <Typography my={2} variant='body2' color="text.secondary">
               Et rebum paulo partem eum, eu has soleat virtute ancillae. Sumo
               delenit eos id, qui minim quaeque neglegentur et. No dicta
               lucilius consetetur mel, ex mei essent facilis, phaedrum antiopam
@@ -45,7 +45,6 @@ const AboutBody = () => {
               <Box key={index}>
                 <img
                   style={{
-                    backgroundColor: "#000",
                     width: "150px",
                     height: "150px",
                     margin: "20px",
@@ -54,8 +53,8 @@ const AboutBody = () => {
                   alt={index}
                 />
                 <Box sx={{ mx: "20px" }}>
-                  <Typography color='#fa844d'>Puesto</Typography>
-                  <Typography my={1} color='#1976D1'>
+                  <Typography color='secondary.main'>Puesto</Typography>
+                  <Typography my={1} color='title.main'>
                     Nombre Apellido
                   </Typography>
                 </Box>
@@ -69,7 +68,7 @@ const AboutBody = () => {
               ? {
                   display: "flex",
                   flexDirection: "column",
-                  mx:"100px",
+                  mx: "100px",
                   my: "60px",
                 }
               : {
@@ -81,10 +80,13 @@ const AboutBody = () => {
           }
         >
           <Box>
-            <Typography variant='h5' sx={{ my: "20px", color:"#eb6f35" }}>
+            <Typography
+              variant='h5'
+              sx={{ my: "20px", color: "complement.main" }}
+            >
               Mision
             </Typography>
-            <Typography variant="body1" sx={{color:"#1976D1"}}>
+            <Typography variant='body1' sx={{ color: "title.main" }}>
               Lorem ipsum dolor sit amet, vide tincidunt mel id, te his elit
               fuisset euripidis, offendit oportere voluptatibus in sit. Ut sit
               errem saepe, ei partem everti efficiendi eos, ius ad melius
@@ -95,10 +97,13 @@ const AboutBody = () => {
           </Box>
           <Divider sx={{ my: "20px" }} />
           <Box>
-            <Typography variant='h5' sx={{ mb: "20px", color:"#eb6f35" }}>
+            <Typography
+              variant='h5'
+              sx={{ mb: "20px", color: "complement.main" }}
+            >
               Vision
             </Typography>
-            <Typography variant="body1" sx={{color:"#1976D1"}}>
+            <Typography variant='body1' sx={{ color: "title.main" }}>
               Lorem ipsum dolor sit amet, vide tincidunt mel id, te his elit
               fuisset euripidis, offendit oportere voluptatibus in sit. Ut sit
               errem saepe, ei partem everti efficiendi eos, ius ad melius

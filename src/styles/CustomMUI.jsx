@@ -1,12 +1,15 @@
-export const ButtonStyle = {
-  height: "3rem",
-  textAlign: "center",
-  color: "#ffffff",
-  fontSize: "1rem",
-  backgroundColor: "#1976D1",
+export const ShadowTextBlack = {
+  textShadow: "1px 1px 1px #000",
+};
+export const ShadowTextWhite = {
+  textShadow: "1px 1px 1px #ffff",
+};
+
+export const NavButton = {
+  color: "text.main",
+  textDecoration: "none",
   "&:hover": {
-    backgroundColor: "#008cff",
-    color: "text.title",
+    color: "complement.main",
   },
 };
 
@@ -28,23 +31,20 @@ export const SwiperTextContainer = {
 export const SwiperTitle = {
   textAlign: "center",
   fontSize: "4.5rem",
-  color: "#ffffff",
-  marginTop: "4rem",
-  textShadow: "1.5px 1.5px 1.5px #000",
+  color: "text.main",
 };
 
 export const SwiperText = {
   textAlign: "center",
   fontSize: "1.4rem",
   fontWeight: "200",
-  color: "#ffffff",
+  color: "text.main",
   marginTop: "4rem",
-  textShadow: "1.5px 1.5px 1.5px #000",
 };
 
 export const ButtonMenu = {
   my: 1,
-  color: "#ffff",
+  color: "text.main",
 };
 
 export const FlexColumnBox = {
@@ -69,21 +69,20 @@ export const ListItemArea = {
 
 export const IconArea = {
   fontSize: "90px",
-  color: "#1976D1",
+  color: "complement.main",
   "&:hover": {
-    color: "#35a4ff",
+    color: "title.main",
   },
 };
 
 export const IconProcess = {
   fontSize: "120px",
-  color: "#000",
+  color: "complement.main",
 };
 
 export const TitleProcess = {
   height: "50px",
-  color: "#eb6f35",
-  textShadow: "0.5px 0.5px 0.5px #fa844d",
+  color: "title.main",
 };
 
 export const BoxProjectsAreas = {

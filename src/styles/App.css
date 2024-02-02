@@ -6,18 +6,6 @@ body {
     min-height: calc(100vh - 190px);
 }
 
-.nav-link {
-    font-size: 20px;
-    color: #ffff;
-    text-shadow: 1px 1px 1px #000;
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    color: #00ffff;
-    text-shadow: 1px 1px 1px #ffff;
-}
-
 .gif {
     width: 1200px;
     margin-top: 50px;
@@ -50,9 +38,6 @@ body {
 }
 
 @media (width < 700px) {
-    .nav-link {
-        font-size: 16px;
-    }
     .gif {
         width: 300px;
     }

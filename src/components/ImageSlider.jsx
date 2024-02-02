@@ -8,13 +8,14 @@ import "../styles/Swiper.css";
 import Image01 from "../assets/img01.jpg";
 import Image02 from "../assets/img02.jpg";
 import Image03 from "../assets/img03.jpg";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import {
-  ButtonStyle,
   SwiperPicture,
   SwiperTextContainer,
   SwiperTitle,
   SwiperText,
+  ShadowTextWhite,
+  ShadowTextBlack
 } from "../styles/CustomMUI";
 
 const images = [
@@ -53,19 +54,16 @@ const ImageSlider = () => {
               sx={{ ...SwiperPicture, backgroundImage: `url(${image.url})` }}
             >
               <Box sx={{ ...SwiperTextContainer }}>
-                <Typography variant='h2' sx={{ ...SwiperTitle }}>
+                <Typography variant='h2' sx={{ ...SwiperTitle, ...ShadowTextBlack }}>
                   {image.title}
                 </Typography>
                 <Typography
                   paragraph={true}
                   variant='caption'
-                  sx={{ ...SwiperText }}
+                  sx={{ ...SwiperText, ...ShadowTextBlack }}
                 >
                   {image.text}
                 </Typography>
-                <Button sx={{ ...ButtonStyle }} variant='contained'>
-                  CONTACT US
-                </Button>
               </Box>
             </Box>
           </SwiperSlide>
