@@ -8,11 +8,10 @@ import "../styles/Swiper.css";
 import { Box, useMediaQuery } from "@mui/material";
 
 const ProjectImageSlider = ({ images }) => {
-  const isNet = useMediaQuery("(min-width:1024px)");
-  const isPc = useMediaQuery("(min-width:1600px)");
+  const isMobile = useMediaQuery("(max-width: 768px");
 
   return (
-    <Box sx={isPc ? { mx: "300px" } : isNet ? { mx: "150px" } : {}}>
+    <Box sx={isMobile ? {} : { mx: "5dvw" }}>
       <Swiper
         navigation={true}
         loop={true}
@@ -24,7 +23,12 @@ const ProjectImageSlider = ({ images }) => {
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <img
-              style={{ width: "100%", maxHeight: "660px", objectFit: "cover" }}
+              style={{
+                width: "100%",
+                maxHeight: "750px",
+                textAlign: "center",
+                objectFit: "cover",
+              }}
               src={image}
               alt={image}
             />

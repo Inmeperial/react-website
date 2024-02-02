@@ -1,5 +1,4 @@
-import Image from "../assets/img000.jpg";
-import Image1 from "../assets/img01.jpg";
+import Image1 from "../assets/img000.jpg";
 import Image2 from "../assets/img02.jpg";
 import Image3 from "../assets/img03.jpg";
 import Worker from "@mui/icons-material/Engineering";
@@ -15,7 +14,7 @@ export const ProyectsData = [
     year: "2021",
     description:
       "Lorem ipsum dolor sit amet, eu aperiam similique definitionem nec, ut mea periculis efficiendi. Eu usu verear vulputate. Id sed error adversarium, error accusamus dissentiunt usu an. Qui id facer putant urbanitas, tritani copiosae intellegebat vix ea, id mea sadipscing theophrastus. Ne his invenire salutandi moderatius, elitr tibique mea ei.",
-    images: [Image, Image1, Image2, Image3],
+    images: [Image1, Image2, Image3],
   },
   {
     id: 2,
@@ -24,7 +23,7 @@ export const ProyectsData = [
     area: "Edificios",
     description:
       "Lorem ipsum dolor sit amet, eu aperiam similique definitionem nec, ut mea periculis efficiendi. Eu usu verear vulputate. Id sed error adversarium, error accusamus dissentiunt usu an. Qui id facer putant urbanitas, tritani copiosae intellegebat vix ea, id mea sadipscing theophrastus. Ne his invenire salutandi moderatius, elitr tibique mea ei.",
-    images: [Image, Image1, Image2, Image3],
+    images: [Image1, Image2, Image3],
   },
   {
     id: 3,
@@ -33,7 +32,7 @@ export const ProyectsData = [
     area: "Baños",
     description:
       "Lorem ipsum dolor sit amet, eu aperiam similique definitionem nec, ut mea periculis efficiendi. Eu usu verear vulputate. Id sed error adversarium, error accusamus dissentiunt usu an. Qui id facer putant urbanitas, tritani copiosae intellegebat vix ea, id mea sadipscing theophrastus. Ne his invenire salutandi moderatius, elitr tibique mea ei.",
-    images: [Image, Image1, Image2, Image3],
+    images: [Image1, Image2, Image3],
   },
   {
     id: 4,
@@ -42,7 +41,7 @@ export const ProyectsData = [
     area: "Arquitectura",
     description:
       "Lorem ipsum dolor sit amet, eu aperiam similique definitionem nec, ut mea periculis efficiendi. Eu usu verear vulputate. Id sed error adversarium, error accusamus dissentiunt usu an. Qui id facer putant urbanitas, tritani copiosae intellegebat vix ea, id mea sadipscing theophrastus. Ne his invenire salutandi moderatius, elitr tibique mea ei.",
-    images: [Image, Image1, Image2, Image3],
+    images: [Image1, Image2, Image3],
   },
 ];
 
