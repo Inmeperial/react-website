@@ -18,7 +18,7 @@ const Contact = () => {
     >
       <Box>
         <Typography variant='h4' color='title.main'>
-          Contactanos
+          Contáctanos
         </Typography>
         <Typography sx={{ mx: "60px", my: "30px", color:"text.secondary" }}>
           Lorem ipsum dolor sit amet, admodum scribentur vel cu, ei autem
