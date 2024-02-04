@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { ThemeProvider, createTheme } from "@mui/material";
-import { primary, secondary, complement, title, text, textBlack } from "./styles/Color.jsx";
+import { primary, secondary, complement, title, text, textBlack } from "./styles/Palette.jsx";
 
 const theme = createTheme({
   palette: {

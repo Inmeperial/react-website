@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../assets/logo.png";
 import { ButtonMenu, NavButton } from "../styles/CustomMUI";
-import { ScrollToBottom, ScrollToTop } from "./Scroll";
+import { ScrollToTop } from "./Scroll";
 
 const drawerWidth = 240;
 const navItems = ["Home", "Proyectos", "Nosotros", "Contacto"];
@@ -41,12 +41,8 @@ const NavBar = ({ window }) => {
           mt: "10px",
         }}
       >
-        {navItems.map((item) =>
-          item === "Contacto" ? (
-            <Button key={item} sx={{ ...ButtonMenu }} onClick={ScrollToBottom}>
-              {item}
-            </Button>
-          ) : (
+        {navItems.map((item) => {
+          return (
             <Button
               key={item}
               sx={{ ...ButtonMenu }}
@@ -55,8 +51,8 @@ const NavBar = ({ window }) => {
             >
               {item}
             </Button>
-          )
-        )}
+          );
+        })}
       </List>
     </Box>
   );
@@ -72,17 +68,7 @@ const NavBar = ({ window }) => {
           <img src={Logo} alt='Logo' />
           <Box sx={{ mr: "10px", display: { xs: "none", sm: "flex" } }}>
             {navItems.map((item, index) => {
-              return item === "Contacto" ? (
-                <Button
-                  key={index}
-                  onClick={ScrollToBottom}
-                  sx={{
-                    ...NavButton,
-                  }}
-                >
-                  {item}
-                </Button>
-              ) : (
+              return (
                 <Button
                   key={index}
                   sx={{ ...NavButton }}
