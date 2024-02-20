@@ -2,6 +2,7 @@ import {
   Box,
   List,
   ListItem,
+  ListItemButton,
   ListItemIcon,
   ListItemText,
   Typography,
@@ -16,41 +17,44 @@ import {
   FlexColumnBox,
   IconArea,
 } from "../styles/CustomMUI";
+import { useNavigate } from "react-router-dom";
+
+const areasList = [
+  { componente: <House sx={{ ...IconArea }} />, item: "Casas" },
+  { componente: <Apartment sx={{ ...IconArea }} />, item: "Edificios" },
+  { componente: <Bathdroom sx={{ ...IconArea }} />, item: "Baños" },
+  { componente: <Architecture sx={{ ...IconArea }} />, item: "Arquitectura" },
+];
 
 const AreasSection = () => {
+  const navigate = useNavigate();
+
+  const handleListItemClick = (category) => {
+    navigate(`/proyectos?categoria=${category}`);
+  };
+
   return (
-    <Box sx={{ ...FlexColumnBox, mb:"50px" }}>
-      <Typography variant='h5' sx={{mb: "20px", color:"title.main"}}>Áreas de enfoque:</Typography>
+    <Box sx={{ ...FlexColumnBox, mb: "50px" }}>
+      <Typography variant='h5' sx={{ mb: "20px", color: "title.main" }}>
+        Áreas de enfoque:
+      </Typography>
 
       <Box>
         <List sx={{ ...ListArea }}>
-          <ListItem sx={{ ...ListItemArea }}>
-            <ListItemIcon>
-              <House sx={{ ...IconArea }} />
-            </ListItemIcon>
-            <ListItemText>Casas</ListItemText>
-          </ListItem>
-
-          <ListItem sx={{ ...ListItemArea }}>
-            <ListItemIcon>
-              <Apartment sx={{ ...IconArea }} />
-            </ListItemIcon>
-            <ListItemText>Edificios</ListItemText>
-          </ListItem>
-
-          <ListItem sx={{ ...ListItemArea }}>
-            <ListItemIcon>
-              <Bathdroom sx={{ ...IconArea }} />
-            </ListItemIcon>
-            <ListItemText>Baños</ListItemText>
-          </ListItem>
-
-          <ListItem sx={{ ...ListItemArea }}>
-            <ListItemIcon>
-              <Architecture sx={{ ...IconArea }} />
-            </ListItemIcon>
-            <ListItemText>Arquitectura</ListItemText>
-          </ListItem>
+          {areasList.map((area) => {
+            return (
+              <ListItem
+                sx={{ ...ListItemArea }}
+              >
+                <ListItemButton onClick={() => handleListItemClick(area.item)}>
+                  <ListItemIcon>
+                    {area.componente}
+                  </ListItemIcon>
+                </ListItemButton>
+                <ListItemText>{area.item}</ListItemText>
+              </ListItem>
+            );
+          })}
         </List>
       </Box>
     </Box>

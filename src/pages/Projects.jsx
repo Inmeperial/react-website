@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   Box,
   FormControl,
@@ -8,27 +10,36 @@ import {
 } from "@mui/material";
 import { ProyectsData } from "../data/Projects";
 import ProjectsComponent from "../components/ProjectsComponent";
-import { useState } from "react";
 import { MarginHeader } from "../styles/CustomMUI";
 
 const Areas = ["Todas", "Casas", "Edificios", "Baños", "Arquitectura"];
 
 const Projects = () => {
-  const [area, setArea] = useState("Todas");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const searchParams = new URLSearchParams(location.search);
+  const initialArea = searchParams.get("categoria") || "Todas";
+  const [area, setArea] = useState(initialArea);
   const [filteredProjects, setFilteredProjects] = useState(ProyectsData);
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams();
+    queryParams.set("categoria", area);
+    navigate(`?${queryParams.toString()}`);
+  }, [area, navigate]);
+
+  useEffect(() => {
+    if (area === "Todas") {
+      setFilteredProjects(ProyectsData);
+    } else {
+      const filtered = ProyectsData.filter((project) => project.area === area);
+      setFilteredProjects(filtered);
+    }
+  }, [area]);
 
   const handleChange = (event) => {
     const selectedArea = event.target.value;
     setArea(selectedArea);
-
-    if (selectedArea === "Todas") {
-      setFilteredProjects(ProyectsData);
-    } else {
-      const filtered = ProyectsData.filter(
-        (project) => project.area === selectedArea
-      );
-      setFilteredProjects(filtered);
-    }
   };
 
   return (
@@ -36,11 +47,11 @@ const Projects = () => {
       <Box sx={{ textAlign: "center", mr: "20px" }}>
         <Typography
           variant='h4'
-          sx={{ textDecoration: "underline", my: "10px", color:"title.main" }}
+          sx={{ textDecoration: "underline", my: "10px", color: "title.main" }}
         >
           Obras
         </Typography>
-        <Typography variant='body1' color="secondary.main">
+        <Typography variant='body1' color='secondary.main'>
           Una variedad de proyectos y desarrollos de diversas características en
           toda Argentina.
         </Typography>
@@ -58,7 +69,7 @@ const Projects = () => {
               {Areas.map((a, index) => {
                 return (
                   <MenuItem key={index} value={a}>
-                    <Typography variant="body2">{a}</Typography>
+                    <Typography variant='body2'>{a}</Typography>
                   </MenuItem>
                 );
               })}
